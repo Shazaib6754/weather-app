@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // je mist de import van de CSS file, zonder deze import werkt de styling niet. Voeg de volgende regel toe aan het begin van je bestand:
-import "./App.css";
+ import "./App.css";
 
 // Dit type klopt met de API, maar is erg minimaal. Plak de fetch-URL eens in je browser en bekijk het volledige antwoord:
 // de API geeft ook "time" dat is een moment van meting en "current_units" terug. Modelleer wat je nodig hebt.
