@@ -56,6 +56,9 @@ const [weather, setWeather] = useState<CurrentWeather | null>(null);
   // google op "discriminated union" in TypeScript. DIt is een state met een "status"-veld ('loading' | 'success' | 'error').
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [weatherState, setWeatherState] = useState<WeatherState>({
+  status: "loading",
+});
 
   // Dit object wordt bij elke render opnieuw aangemaakt en geeft een ESLint-waarschuwing (draai "npm run lint").
   // Zet de stedenlijst buiten het component, of in een eigen bestand (bijv. "src/cities.ts").
