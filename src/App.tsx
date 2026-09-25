@@ -30,10 +30,11 @@ type CurrentWeather = {
 //Eerste render toont de default stad (Rotterdam) maar loading start als false en nummers starten als 0 dus voor eerste fetch zie je en error message.
 // je kunt dit oplossen door de default state van loading op true te zetten en de default state van error op een lege string. Dan wordt de eerste fetch uitgevoerd en wordt de error message pas getoond als er daadwerkelijk een fout optreedt.
 
+type CityName = "Rotterdam" | "Amsterdam" | "Utrecht" | "Den Haag";
 function App() {
   // "city" is nu een gewoone "string". Daardoor heb je verderop een cast nodig ("city as keyof typeof cities").
   // Type "city" zo dat alleen geldige steden mogelijk zijn, bijv. met een union type "CityName".
-  const [city, setCity] = useState("Rotterdam");
+  const [city, setCity] = useState<CityName>("Rotterdam");
 
   // Drie lose states met startwaarde 0 dus nu betekent "0" zowel "nog geen data" als "het is 0 °C".
   // Gebruik liever een state voor het weer, bijv. "useState<CurrentWeather | null>(null)".
