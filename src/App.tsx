@@ -46,9 +46,7 @@ function App() {
 
   // Drie lose states met startwaarde 0 dus nu betekent "0" zowel "nog geen data" als "het is 0 °C".
   // Gebruik liever een state voor het weer, bijv. "useState<CurrentWeather | null>(null)".
-  const [temperature, setTemperature] = useState(0);
-  const [wind, setWind] = useState(0);
-  const [humidity, setHumidity] = useState(0);
+const [weather, setWeather] = useState<CurrentWeather | null>(null);
 
   // "loading", "error" en de weerdata zijn losse variabelen, dus onmogelijke combinaties kunnen bestaan (bijv. loading en error).
   // google op "discriminated union" in TypeScript. DIt is een state met een "status"-veld ('loading' | 'success' | 'error').
