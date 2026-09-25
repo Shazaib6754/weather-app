@@ -138,9 +138,9 @@ setWeather({
         <div>
           <h2>{city}</h2>
 
-          <p>Temperatuur: {temperature} °C</p>
-          <p>Wind: {wind} km/u</p>
-          <p>Luchtvochtigheid: {humidity} %</p>
+          <p>Temperatuur: {weather?.temperature} °C</p>
+<p>Wind: {weather?.wind} km/u</p>
+<p>Luchtvochtigheid: {weather?.humidity} %</p>
         </div>
       )}
     </div>
