@@ -86,10 +86,12 @@ const [weather, setWeather] = useState<CurrentWeather | null>(null);
       //      }
       // Goed dat je "response.ok" controleert!
       if (!response.ok) {
-        setError("Er ging iets mis bij het ophalen van het weer.");
-        setLoading(false);
-        return;
-      }
+  setWeatherState({
+    status: "error",
+    message: "Er ging iets mis bij het ophalen van het weer.",
+  });
+  return;
+}
 
       const data: WeatherResponse = await response.json();
 
