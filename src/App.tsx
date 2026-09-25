@@ -39,6 +39,10 @@ const cities = {
   "Den Haag": { latitude: 52.07, longitude: 4.3 },
 };
 
+type WeatherState =
+  | { status: "loading" }
+  | { status: "success"; data: CurrentWeather }
+  | { status: "error"; message: string };
 function App() {
   // "city" is nu een gewoone "string". Daardoor heb je verderop een cast nodig ("city as keyof typeof cities").
   // Type "city" zo dat alleen geldige steden mogelijk zijn, bijv. met een union type "CityName".
