@@ -100,6 +100,14 @@ setWeather({
   wind: data.current.wind_speed_10m,
   humidity: data.current.relative_humidity_2m,
 });
+setWeatherState({
+  status: "success",
+  data: {
+    temperature: data.current.temperature_2m,
+    wind: data.current.wind_speed_10m,
+    humidity: data.current.relative_humidity_2m,
+  },
+});
 
       // setError(
       //     err instanceof Error
