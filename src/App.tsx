@@ -87,9 +87,11 @@ const [weather, setWeather] = useState<CurrentWeather | null>(null);
 
       const data: WeatherResponse = await response.json();
 
-      setTemperature(data.current.temperature_2m);
-      setWind(data.current.wind_speed_10m);
-      setHumidity(data.current.relative_humidity_2m);
+setWeather({
+  temperature: data.current.temperature_2m,
+  wind: data.current.wind_speed_10m,
+  humidity: data.current.relative_humidity_2m,
+});
 
       // setError(
       //     err instanceof Error
