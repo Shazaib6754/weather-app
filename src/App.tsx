@@ -139,7 +139,7 @@ setWeatherState({
       </select>
 
       {/* Geneste ternaries (? : ? :) worden snel onleesbaar. Met een state met een "status" veld kun je dit netter oplossen. */}
-      {loading ? (
+      {weatherState.status === "loading" ? ( (
         <p>Weer wordt geladen...</p>
       ) : error ? (
         // Geef de foutmelding een eigen stijl, zodat hij duidelijk anders oogt dan gewone tekst. Klein ding maar maakt de app prettiger in gebruik.
