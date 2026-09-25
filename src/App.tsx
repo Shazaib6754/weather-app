@@ -31,6 +31,14 @@ type CurrentWeather = {
 // je kunt dit oplossen door de default state van loading op true te zetten en de default state van error op een lege string. Dan wordt de eerste fetch uitgevoerd en wordt de error message pas getoond als er daadwerkelijk een fout optreedt.
 
 type CityName = "Rotterdam" | "Amsterdam" | "Utrecht" | "Den Haag";
+
+const cities = {
+  Rotterdam: { latitude: 51.92, longitude: 4.48 },
+  Amsterdam: { latitude: 52.37, longitude: 4.9 },
+  Utrecht: { latitude: 52.09, longitude: 5.12 },
+  "Den Haag": { latitude: 52.07, longitude: 4.3 },
+};
+
 function App() {
   // "city" is nu een gewoone "string". Daardoor heb je verderop een cast nodig ("city as keyof typeof cities").
   // Type "city" zo dat alleen geldige steden mogelijk zijn, bijv. met een union type "CityName".
@@ -49,12 +57,7 @@ function App() {
 
   // Dit object wordt bij elke render opnieuw aangemaakt en geeft een ESLint-waarschuwing (draai "npm run lint").
   // Zet de stedenlijst buiten het component, of in een eigen bestand (bijv. "src/cities.ts").
-  const cities = {
-    Rotterdam: { latitude: 51.92, longitude: 4.48 },
-    Amsterdam: { latitude: 52.37, longitude: 4.9 },
-    Utrecht: { latitude: 52.09, longitude: 5.12 },
-    "Den Haag": { latitude: 52.07, longitude: 4.3 },
-  };
+ 
 
   useEffect(() => {
     // Het ophalen van data zit nu midden in je component. Verplaats de fetch logica naar een aparte functie,
