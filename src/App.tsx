@@ -68,8 +68,7 @@ const [weather, setWeather] = useState<CurrentWeather | null>(null);
     // Het ophalen van data zit nu midden in je component. Verplaats de fetch logica naar een aparte functie,
     // bijv. "fetchWeather(coordinates)" in "src/api/weather.ts", die een "Promise<CurrentWeather>" teruggeeft.
     const getWeather = async () => {
-      setLoading(true);
-      setError("");
+    setWeatherState({ status: "loading" });
 
       const location = cities[city as keyof typeof cities];
 
