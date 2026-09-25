@@ -16,6 +16,17 @@ type WeatherResponse = {
   };
 };
 
+type Coordinates = {
+  latitude: number;
+  longitude: number;
+};
+
+type CurrentWeather = {
+  temperature: number;
+  humidity: number;
+  wind: number;
+};
+
 //Eerste render toont de default stad (Rotterdam) maar loading start als false en nummers starten als 0 dus voor eerste fetch zie je en error message.
 // je kunt dit oplossen door de default state van loading op true te zetten en de default state van error op een lege string. Dan wordt de eerste fetch uitgevoerd en wordt de error message pas getoond als er daadwerkelijk een fout optreedt.
 
