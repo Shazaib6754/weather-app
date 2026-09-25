@@ -54,8 +54,7 @@ const [weather, setWeather] = useState<CurrentWeather | null>(null);
 
   // "loading", "error" en de weerdata zijn losse variabelen, dus onmogelijke combinaties kunnen bestaan (bijv. loading en error).
   // google op "discriminated union" in TypeScript. DIt is een state met een "status"-veld ('loading' | 'success' | 'error').
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+
   const [weatherState, setWeatherState] = useState<WeatherState>({
   status: "loading",
 });
