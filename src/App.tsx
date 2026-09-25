@@ -52,7 +52,7 @@ function App() {
 
   // "loading", "error" en de weerdata zijn losse variabelen, dus onmogelijke combinaties kunnen bestaan (bijv. loading en error).
   // google op "discriminated union" in TypeScript. DIt is een state met een "status"-veld ('loading' | 'success' | 'error').
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   // Dit object wordt bij elke render opnieuw aangemaakt en geeft een ESLint-waarschuwing (draai "npm run lint").
