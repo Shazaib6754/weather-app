@@ -141,9 +141,8 @@ setWeatherState({
       {/* Geneste ternaries (? : ? :) worden snel onleesbaar. Met een state met een "status" veld kun je dit netter oplossen. */}
       {weatherState.status === "loading" ? ( (
         <p>Weer wordt geladen...</p>
-      ) : error ? (
-        // Geef de foutmelding een eigen stijl, zodat hij duidelijk anders oogt dan gewone tekst. Klein ding maar maakt de app prettiger in gebruik.
-        <p>{error}</p>
+      ) : weatherState.status === "error" ? (
+  <p>{weatherState.message}</p>
       ) : (
         // Maak hier een los "WeatherCard" component van dat de weerdata als prop krijgt.
         // Kleine details die de app prettiger maken:
