@@ -118,7 +118,7 @@ setWeatherState({
       //   setLoading(false);
       // }
       // Test dit door je wifi uit te zetten en een stad te kiezen: nu blijft de app voor altijd "laden".
-      setLoading(false);
+     
     };
 
     getWeather();
